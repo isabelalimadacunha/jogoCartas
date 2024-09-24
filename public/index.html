@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Cartas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script> <!-- Incluindo Socket.IO -->
+</head>
+<body>
+    <div id="telaInicial" class="tela">
+        <img id="imgCartas" src="IMG_6859.png" width="85" height="60" >
+
+        <div id="entradaTexto">
+        <h1>ENTRE NA SALA</h1>
+    </div>
+        <div id="salas">
+            <div class="sala" onclick="entrarSala('Sala 1', this)">SALA 1: 0/2</div>
+            <div class="sala" onclick="entrarSala('Sala 2', this)">SALA 2: 0/3</div>
+            <div class="sala" onclick="entrarSala('Sala 3', this)">SALA 3: 0/4</div>
+        </div>
+    </div>
+
+    <div id="telaJogo" class="tela hidden">
+        
+        <div id="infoJogador">
+            <div id="nomeUsuario">Usuário: </div>
+            <div id="salaAtual">Sala: </div>
+        </div>
+        <div id="rodada">
+            <h2>RODADA:</h2>
+            <div id="cartaAtual">Carta Atual: A♠</div>
+            <button id="botaoBater" onclick="bater()">BATER</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
